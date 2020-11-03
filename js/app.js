@@ -17,8 +17,13 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
             r[k] = a[j];
     return r;
 };
+
+
+
 // ARRAY OPERATIONS //
 console.log("---------ARRAY OPERATIONS---------");
+
+
 // 1.Head
 var datos = {
     name: "ana",
@@ -30,25 +35,42 @@ var head = function (_a) {
     return name;
 };
 console.log(head(datos));
+
+
+
 // 2.Tail
 var Fruits = ["manzana", "pera", "platano"];
 var firstItem = Fruits[0], restItems = Fruits.slice(1);
 var tail = function () { return console.log(restItems); };
 tail();
+
+
+
 // 3.Init
 var autos = ["audi", "mercedes", "seat"];
 var autosAlemania = autos.slice(0, 2);
 var init = function () { return console.log(autosAlemania); };
 init();
 // 4.Last
+
+
+
 var nombres = ["ana", "sofia", "antonio"];
 var last = nombres.pop();
 console.log(last);
+
+
+
 // CONCAT  //
 console.log("---------CONCAT---------");
 var concat = function (a, b) { return __spreadArrays(a, b); };
 console.log(concat([1, 2, 3], ["hola ", "que", "tal"]));
+
+
+
+
 // CLONE MERGE //
+
 // 1.Clone
 console.log("---------CLONE---------");
 var source = { name: "Maria", surname: "Ibañez", country: "SPA" };
@@ -56,7 +78,10 @@ var shallowClone = __assign({}, source);
 var deepClone = JSON.parse(JSON.stringify(source));
 console.log("shallowClone", shallowClone);
 console.log("deepClone", deepClone);
-// 
+
+
+
+
 // 2.Merge
 console.log("---------MERGE---------");
 var a = { name: "Maria", surname: "Ibañez", country: "SPA" };
@@ -65,8 +90,13 @@ var merge = function (target, source) {
     return __assign(__assign({}, target), source);
 };
 console.log(merge(a, b));
+
+
+
 // READ BOOKS //
 console.log("---------READ BOOKS---------");
+
+
 var books = [
     { title: "Harry Potter y la piedra filosofal", isRead: true },
     { title: "Canción de hielo y fuego", isRead: false },
@@ -83,8 +113,13 @@ function isBookRead(books) {
     }
 }
 isBookRead(books);
+
+
+
 // SLOT MACHINE //
 console.log("---------SLOT MACHINE---------");
+
+
 var generateNumber = function () { return Math.round(Math.random() * 10); };
 var generateBoolean = function () { return generateNumber() > 5; };
 var SlotMachine = /** @class */ (function () {
